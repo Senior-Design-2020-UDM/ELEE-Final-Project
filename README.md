@@ -12,6 +12,6 @@ brightness of LED.
 
 show you the energy consumption in the form of picture within this period of time. 
 
-3. The third part is about voice control. First, we will test the speech recognition demo in Matlab, and then we will use Python
+3. The third part is about voice control. First, we will test the speech recognition demo in Matlab, and then we will use 
 
-to achieve the voice control part.
+Python to achieve the voice control part.
