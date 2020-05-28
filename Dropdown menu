@@ -44,7 +44,7 @@ void setup()
 
 void loop()
 {
-  EnergyCal();
+//  EnergyCal();
 
   WiFiClient client = server.available();
   if (client)
@@ -69,7 +69,7 @@ void loop()
             client.println();
 
             client.println("<HTML>");
-            
+
             client.println("<HEAD>");
             client.println("<meta name = \"viewport\" content = \"width=device-width, initial-scale=1\">");
             client.println("<style>");
@@ -99,86 +99,28 @@ void loop()
             client.println("</HTML>");
             client.println("<meta http-equiv=\"refresh\" content=\"4\">");
 
-  
+            Serial.print("readString: ");
+            Serial.print(readString);
+            
             if (readString.indexOf("?Green") > 0)
             {
               Serial.println("A");
             }
-            delay(5);
-            if (readString.indexOf("?Yellow") > 0)
+            else if (readString.indexOf("?Yellow") > 0)
             {
               Serial.println("B");
             }
-            delay(5);
-            if (readString.indexOf("?gy") > 0)
+            else if(readString.indexOf("?gy") > 0)
             {
               Serial.println("C");
             }
-            delay(5);
-            
+
             readString = "";
             delay(5);
             client.stop();
             Serial.println("client disonnected");
           }
         }
-      }
-    }
-  }
-}
-
-void EnergyCal()
-{
-  unsigned long currenttime1, currenttime2, delaytime;
-  float Energy;
-  if ((digitalRead(greenLed) == HIGH) && (digitalRead(yellowLed) == LOW))
-  {
-    Serial.println('G');
-    currenttime1 = millis();
-    while (1)
-    {
-      if (digitalRead(greenLed) == LOW)
-      {
-        currenttime2 = millis();
-        delaytime = currenttime2 - currenttime1;
-        Energy = 24 * delaytime / 1000;      //the unit of Energy is mw.
-        Serial.print("Energy: ");
-        Serial.println(Energy);
-        break;
-      }
-    }
-  }
-  else if ((digitalRead(greenLed) == LOW) && (digitalRead(yellowLed) == HIGH))
-  {
-    Serial.println('Y');
-    currenttime1 = millis();
-    while (1)
-    {
-      if (digitalRead(yellowLed) == LOW)
-      {
-        currenttime2 = millis();
-        delaytime = currenttime2 - currenttime1;
-        Energy = 24 * delaytime / 1000;      //the unit of Energy is mw.
-        Serial.print("Energy: ");
-        Serial.println(Energy);
-        break;
-      }
-    }
-  }
-  else if ((digitalRead(greenLed) == HIGH) && (digitalRead(yellowLed) == HIGH))
-  {
-    Serial.println("YG");
-    currenttime1 = millis();
-    while (1)
-    {
-      if ((digitalRead(greenLed) == LOW) && (digitalRead(yellowLed) == LOW))
-      {
-        currenttime2 = millis();
-        delaytime = currenttime2 - currenttime1;
-        Energy = 2 * 24 * delaytime / 1000;    //the unit of Energy is mw.
-        Serial.print("Energy: ");
-        Serial.println(Energy);
-        break;
       }
     }
   }
