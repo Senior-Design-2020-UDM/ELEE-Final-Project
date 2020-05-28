@@ -9,9 +9,6 @@
 #define SPIWIFI_ACK   7   // a.k.a BUSY or READY pin
 #define ESP32_GPIO0   6
 
-#define greenLed 2
-#define yellowLed 3
-
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = SECRET_SSID;        // your network SSID (name)
 char pass[] = SECRET_PASS;        // your network password (use for WPA, or use as key for WEP)
@@ -22,8 +19,6 @@ String readString;
 
 void setup()
 {
-  pinMode(greenLed, INPUT);
-  pinMode(yellowLed, INPUT);
   Serial.begin(9600);
 
   while (status != WL_CONNECTED)
@@ -44,8 +39,6 @@ void setup()
 
 void loop()
 {
-  EnergyCal();
-
   WiFiClient client = server.available();
   if (client)
   {
@@ -66,45 +59,34 @@ void loop()
             client.println("Content-Type: text/html");
             client.println("Connection: close");  // the connection will be closed after completion of the response
             client.println("Refresh: 60");
+            client.println();
 
-            client.println("<HTML>");
-            
+            client.println("<html>");
             client.println("<body>");
 
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<br />");
-            client.println("<hr />");
-            client.println("<br />");
+            client.println("<center><h1>Please choose the start date and end date</h1>");
+            client.println("<br>");
+            client.println("<br>");
+            client.println("<form action=\"http://192.168.0.109/\">");
 
-            client.println("<center><h2>You can select the startDate and the endDate</h2><center>");
-            client.println("<br />");
-            client.println("<br />");
+            client.println("<label for=\"StartDate\">StartDate:</label>");
+            client.println("<input type=\"StartDate\" id=\"StartDate\" name=\"StartDate\">");
+            client.println("<br>");
+            client.println("<br>");
+            client.println("<label for=\"EndDate\">EndDate:</label>");
+            client.println("<input type=\"EndDate\" id=\"EndDate\" name=\"EndDate\">");
+            client.println("<br>");
+            client.println("<br>");
+            client.println("<input type=\"submit\">");
 
-            client.println("<form action = \"/http://192.168.0.107/\">");
-            client.println("<label for = \"startDate\">startDate: </label>");
-            client.println("<input type = \"date\" id = \"startDate\" name = \"startDate\">");
-            client.println("<br />");
-            client.println("<label for = \"endDate\">endDate: </label>");
-            client.println("<input type = \"date\" id = \"endDate\" name = \"endDate\">");
-            client.println("<br />");
-
-            client.println("<input type = \"submit\">");
-            Serial.println("startDate");
             client.println("</form>");
 
-            client.println("</BODY>");
-            client.println("</HTML>");
+            client.println("</body>");
+            client.println("</html>");
+
             client.println("<meta http-equiv=\"refresh\" content=\"4\">");
 
+            delay(3);
             readString = "";
             delay(5);
             client.stop();
