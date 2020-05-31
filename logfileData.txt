@@ -1,0 +1,137 @@
+20-May-2020
+Y
+Energy: 0.00
+20-May-2020
+G
+Energy: 0.00
+20-May-2020
+Y
+Energy: 69.00
+20-May-2020
+G
+Energy: 0.00
+20-May-2020
+G
+Energy: 102.00
+29-May-2020
+Y
+Energy: 41.00
+29-May-2020
+Y
+Energy: 0.00
+29-May-2020
+Y
+Energy: 0.00
+29-May-2020
+G
+Energy: 132.00
+30-May-2020
+Y
+Energy: 0.00
+30-May-2020
+Y
+Energy: 0.00
+30-May-2020
+G
+Energy: 80.00
+30-May-2020
+Y
+Energy: 0.00
+30-May-2020
+Y
+Energy: 0.00
+30-May-2020
+Y
+Energy: 0.00
+30-May-2020
+Y
+Energy: 0.00
+30-May-2020
+Y
+Energy: 79.00
+30-May-2020
+Y
+Energy: 100.00
+30-May-2020
+Y
+Energy: 112.00
+30-May-2020
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+30-May-2020
+Attempting to connect to Network named: TP-LINK_FF04
+Attempting to connect to Network named: TP-LINK_FF04
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+new client
+GET /?Green HTTP/1.1
+readString: GET /?Green HTTP/1.1
+A
+client disonnected
+new client
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+new client
+Attempting to connect to Network named: TP-LINK_FF04
+Attempting to connect to Network named: TP-LINK_FF04
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+new client
+GET /?Green HTTP/1.1
+readString: GET /?Green HTTP/1.1
+A
+client disonnected
+new client
+GET /?Green HTTP/1.1
+Attempting to connect to Network named: TP-LINK_FF04
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+new client
+GET /?StartDate=5-20&EndDate=5-30 HTTP/1.1
+client disonnected
+new client
+GET /?StartDate=5-20&EndDate=5-30 HTTP/1.1
+Attempting to connect to Network named: TP-LINK_FF04
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.110
+new client
+GET / HTTP/1.1
+client disonnected
+new client
+GET / HTTP/1.1
+client disonnected
+new client
+GET /?StartDate=5-20&EndDate=5-30 HTTP/1.1
+client disonnected
+new client
+GET /?StartDate=5-20&EndDate=5-30 HTTP/1.1
+client disonnected
+new client
+Attempting to connect to Network named: TP-LINK_FF04
+You're connected to the network with SSID: TP-LINK_FF04
+IP Address: 192.168.0.108
+new client
+GET / HTTP/1.1
+client disonnected
+new client
+GET / HTTP/1.1
+client disonnected
+new client
+GET /?StartDate=20-May&EndDate=30-May HTTP/1.1
+client disonnected
+new client
+GET /?StartDate=20-May&EndDate=30-May HTTP/1.1
+client disonnected
+new client
